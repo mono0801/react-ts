@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+interface BoxProps {
+    bgColor: string;
+}
+
+interface BtnProps {
+    bgColor: string;
+}
+
 const Father = styled.div`
     display: flex;
     padding-top: 7.5px;
@@ -8,7 +16,7 @@ const Father = styled.div`
     background-color: ${(props) => props.theme.backgroundColor};
 `;
 
-const Box = styled.div`
+const Box = styled.div<BoxProps>`
     // ${(props) => props.bgColor}을 통해 컴포넌트에서 설정한 prop을 가져옴
     background-color: ${(props) => props.bgColor};
     width: 100px;
@@ -28,7 +36,7 @@ const Text = styled.span`
     color: white;
 `;
 
-const Btn = styled.button`
+const Btn = styled.button<BtnProps>`
     color: white;
     background-color: ${(props) => props.bgColor};
     border: 0;
@@ -64,6 +72,13 @@ function App() {
                 <Input />
                 <Input />
                 <Input />
+            </Father>
+
+            <Father>
+                <div>
+                    <Circle bgColor="teal" />
+                    <Circle bgColor="tomato" />
+                </div>
             </Father>
         </div>
     );
