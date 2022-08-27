@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Anohter_Circle from "./Circle";
 
 interface BoxProps {
     bgColor: string;
@@ -76,8 +77,8 @@ function App() {
 
             <Father>
                 <div>
-                    <Circle bgColor="teal" />
-                    <Circle bgColor="tomato" />
+                    <Anohter_Circle borderColor="white" bgColor="teal" />
+                    <Anohter_Circle text="im here" bgColor="tomato" />
                 </div>
             </Father>
         </div>
